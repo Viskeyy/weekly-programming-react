@@ -4,6 +4,11 @@ import { tanstackRouter } from '@tanstack/router-plugin/rspack';
 
 export default defineConfig({
     plugins: [pluginReact()],
+    html: {
+        title: 'Weekly Programming React',
+        favicon: './public/favicon.svg',
+        template: './src/index.html',
+    },
     tools: {
         rspack: {
             resolve: {
