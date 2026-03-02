@@ -1,4 +1,4 @@
-import { Layout } from '@/components/Layout';
+import { Sidebar } from '@/components/Sidebar';
 import { Outlet, createRootRoute } from '@tanstack/react-router';
 
 export const Route = createRootRoute({
@@ -7,8 +7,11 @@ export const Route = createRootRoute({
 
 function RootComponent() {
     return (
-        <Layout>
-            <Outlet />
-        </Layout>
+        <div className="mx-auto flex h-screen max-w-[1280px] p-4">
+            <Sidebar />
+            <main className="flex-1 overflow-auto">
+                <Outlet />
+            </main>
+        </div>
     );
 }

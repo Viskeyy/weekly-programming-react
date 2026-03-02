@@ -1,5 +1,3 @@
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
 import { Sidebar } from '@/components/Sidebar';
 import * as React from 'react';
 
@@ -9,13 +7,9 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <div className="flex h-screen flex-col">
-            <Header />
-            <div className="flex flex-1">
-                <Sidebar />
-                <main className="flex-1 overflow-auto">{children}</main>
-            </div>
-            <Footer />
+        <div className="mx-auto flex h-screen max-w-[1280px] p-4">
+            <Sidebar />
+            <main className="flex-1 overflow-auto">{children}</main>
         </div>
     );
 };

@@ -22,6 +22,14 @@ export default defineConfig({
                     autoCodeSplitting: true,
                 }),
             ],
+            module: {
+                rules: [
+                    {
+                        test: /\.md$/,
+                        type: 'asset/source',
+                    },
+                ],
+            },
         },
     },
 });
