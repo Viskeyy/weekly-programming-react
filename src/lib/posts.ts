@@ -6,6 +6,7 @@ import week4 from '@/content/2026/weekly_programming_26_4.md?raw';
 import week5 from '@/content/2026/weekly_programming_26_5.md?raw';
 import week6 from '@/content/2026/weekly_programming_26_6.md?raw';
 import week7 from '@/content/2026/weekly_programming_26_7.md?raw';
+import week10 from '@/content/2026/weekly_programming_26_10.md?raw';
 
 export const postsMap: Record<string, string> = {
     weekly_programming_26_2: week2,
@@ -15,11 +16,12 @@ export const postsMap: Record<string, string> = {
     weekly_programming_26_6: week6,
     weekly_programming_26_7: week7,
     Weekly_Programming_26_9: week9,
+    weekly_programming_26_10: week10,
 };
 
 export const postSlugs = Object.keys(postsMap).sort((a, b) => {
-    const weekA = parseInt(a.match(/\d+$/)?.[0] ?? '0');
-    const weekB = parseInt(b.match(/\d+$/)?.[0] ?? '0');
+    const weekA = Number.parseInt(/\d+$/.exec(a)?.[0] ?? '0');
+    const weekB = Number.parseInt(/\d+$/.exec(b)?.[0] ?? '0');
     return weekA - weekB;
 });
 
