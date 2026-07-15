@@ -17,6 +17,7 @@ import week17 from '@/content/2026/weekly_programming_26_17.md?raw';
 import week18 from '@/content/2026/weekly_programming_26_18.md?raw';
 import week21 from '@/content/2026/weekly_programming_26_21.md?raw';
 import week24 from '@/content/2026/weekly_programming_26_24.md?raw';
+import week27 from '@/content/2026/weekly_programming_26_27.md?raw';
 
 export const postsMap: Record<string, string> = {
     weekly_programming_26_2: week2,
@@ -37,6 +38,7 @@ export const postsMap: Record<string, string> = {
     weekly_programming_26_18: week18,
     weekly_programming_26_21: week21,
     weekly_programming_26_24: week24,
+    weekly_programming_26_27: week27,
 };
 
 export const postSlugs = Object.keys(postsMap).sort((a, b) => {
